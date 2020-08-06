@@ -7,8 +7,7 @@ phases:
 artifacts:
   files:
   - index.html
-  - CorbinBeebe-Resume.pdf
+  - resume/*
   - favicon.ico
   - styles/*
   - images/*
-  
