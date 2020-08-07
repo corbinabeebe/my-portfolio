@@ -11,3 +11,13 @@ HTML
 CSS
 Font Awesome
 Google Fonts
+
+AWS:
+  S3
+  Route53
+  CloudFront
+  CodeBuild
+
+Python
+Boto3
+zipfile
