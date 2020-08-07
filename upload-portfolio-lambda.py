@@ -1,5 +1,5 @@
 import boto3
-import StringIO
+import io
 import zipfile
 import mimetypes
 
