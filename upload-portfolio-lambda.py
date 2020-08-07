@@ -31,7 +31,7 @@ def lambda_handler(event, context):
 
         #set portfolio_zip to byte io in memory file
         portfolio_zip = io.BytesIO()
-        
+
         #downloads zipfile
         build_bucket.download_fileobj(location['objectKey'], portfolio_zip)
 
@@ -48,7 +48,7 @@ def lambda_handler(event, context):
         topic.publish(Subject="Portfolio Deployed", Message="Portfolio deployed successfully!")
         if job:
             codepipeline = boto3.client('codepipeline')
-            codepipeline.put_job_success_result(jobID=job['id'])
+            codepipeline.put_job_success_result(jobId=job['id'])
     except:
         topic.publish(Subject="Portfolio Deploy Failed", Message="Something terrible happened!! Portfolio deployment crashed and burned!")
         raise
