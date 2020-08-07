@@ -1,5 +1,5 @@
 import boto3
-import io
+import StringIO
 import zipfile
 import mimetypes
 
@@ -11,7 +11,7 @@ portfolio_bucket = s3.Bucket('portfolio.cbeebe.net')
 build_bucket = s3.Bucket("portfoliobuild.cbeebe.net")
 
 #set portfolio_zip to byte io in memory file
-portfolio_zip = io.BytesIO()
+portfolio_zip = StringIO.StringIO()
 
 #downloads zipfile
 build_bucket.download_fileobj('portfoliobuild.zip', portfolio_zip)
@@ -20,6 +20,6 @@ build_bucket.download_fileobj('portfoliobuild.zip', portfolio_zip)
 with zipfile.ZipFile(portfolio_zip) as myzip:
     for nm in myzip.namelist():
         obj = myzip.open(nm)
-        s3.upload_fileobj(nm, portfolio_zip, object_name=None,
-            ExtraArgs={'ContentType':mimetypes.guess_type(nm, strict=True)})
-        portfolio_bucket.upload_file(nm, ExtraArgs={'ACL':'public-read'})
+        portfolio_bucket.upload_fileobj(obj, nm,
+            ExtraArgs={'ContentType':mimetypes.guess_type(nm)[0]})
+        portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
