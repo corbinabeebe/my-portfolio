@@ -15,9 +15,16 @@ Google Fonts
 AWS:
   S3
   Route53
-  CloudFront
+  CloudFront(CDN)
   CodeBuild
+  CodePipeline
+  Lambda
 
-Python
-Boto3
-zipfile
+Python:
+  Boto3
+  zipfile
+
+JavaScript:
+  Babel
+  ReactJS
+  Webpack
