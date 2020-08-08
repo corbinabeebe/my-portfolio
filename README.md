@@ -27,4 +27,8 @@ Python:
 JavaScript:
   Babel
   ReactJS
+  Chai
+  Mocha
+  NPM
   Webpack
+  
