@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work';
 
-const myWork = [ {
+const myWork = [ 
+    {
     'title': "Book Review Web App",
+    'href': '#',
+    'desc': "Under Construction",
     'image': {
         'desc': "Example screenshot of book review web app",
         'src': "images/book_review_app.jpg",
@@ -12,6 +15,8 @@ const myWork = [ {
     },
     {
     'title': "What's that Flagg? app",
+    'href': '#',
+    'desc': "Under Construction",
     'image': {
         'desc': "example image of What's that flag application",
         'src': "images/whats_that_flag.png",
@@ -19,9 +24,11 @@ const myWork = [ {
         }
     },
     {
-    'title': "Portfolio Boilerplate",
+    'title': "Corbin's Blog",
+    'href': '#',
+    'desc': "Under Construction",
     'image': {
-        'desc': "image of portfolio boilerplate",
+        'desc': "image of Corbin's Blog",
         'src': "images/portfoliopicture.jpg",
         'comment': `Portfolio boilerplate code`
         }
