@@ -31,4 +31,6 @@ JavaScript:
   Mocha
   NPM
   Webpack
+  Jest
+  Enzyme
   
