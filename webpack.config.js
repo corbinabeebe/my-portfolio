@@ -10,9 +10,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: [/\.jsx?$/],
                 exclude: [
-                    /node_modules/
+                    path.resolve(__dirname, "/node_modules/")
                 ],
                 loader: "babel-loader",
                 options: {
