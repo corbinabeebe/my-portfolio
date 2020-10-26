@@ -37,7 +37,7 @@ const myWork = [
             requirements (Java, Android, XML)```,
     image: {
       desc: "image of password generator app",
-      src: "images/portfoliopicture.jpg",
+      src: "images/PasswordGenerator.jpg",
       comment: `Password generator app screen shot`,
     },
   },
